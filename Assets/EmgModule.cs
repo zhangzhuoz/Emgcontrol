@@ -97,8 +97,6 @@ public class EmgModule
         //Create a binary reader to read the data
         BinaryReader reader = new BinaryReader(emgStream);
 
-       // float[] a = new float[5];
-        //float sum = 0;
 
 
         while (running)
