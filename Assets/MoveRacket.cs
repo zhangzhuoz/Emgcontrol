@@ -42,6 +42,8 @@ public class MoveRacket : MonoBehaviour
     List<float> listToHoldData;
     List<float> listToHoldTime;
 
+    float[] a = new float[20];
+
     void Start()
     {
         Console.WriteLine("This is a Client, host name is {0}", Dns.GetHostName());//获取本地计算机的主机名
@@ -73,11 +75,33 @@ public class MoveRacket : MonoBehaviour
 
     }
 
+    private float EmgFilter(int jieshu, float emg)
+    {
+ 
+        float sum = 0;
+        float filterEmg = 0;
+        for (int i = jieshu - 1; i > 0; i--)
+        {
+            a[i] = a[i - 1];
+            sum += a[i];
+        }
+        a[0] = emg;
+        //if (a[jieshu - 1] == 0) myEmg.emgData[0] = 0;
+        filterEmg = (sum + a[0]) / jieshu;
+        return filterEmg;
+
+
+    }
+
     void FixedUpdate()
     {
 
-        //float v = Input.GetAxisRaw("Vertical");
-        barHeight = myEmg.emgData[0] * 1000000;
+
+        //myEmg.emgData[0] *= 1000000;
+        //barHeight = myEmg.emgData[0] * 1000000;
+        
+        barHeight = EmgFilter(20, myEmg.emgData[0]);
+        barHeight = barHeight * 1000000;
         GetComponent<Rigidbody2D>().position = new Vector2(0, barHeight);
         //obj.transform.position = new Vector2(0, barHeight);
         //print(barHeight*1000000);
