@@ -24,10 +24,8 @@ public class EmgModule
     private StreamWriter commandWriter;
     private bool connected = true; //true if connected to server
     private bool running = false;   //true when acquiring data
-    byte[] data = new byte[1024];
-    Socket newsock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-    static IPEndPoint sender = new IPEndPoint(IPAddress.Any, 0);
-    EndPoint Remote = (EndPoint)(sender);
+
+
 
     // Use this for initialization
     public void  startEmg () {
