@@ -30,3 +30,10 @@ C:\Users\张琢之de\Desktop\pong pong game\UdpServer\UdpServer\obj\x86\Debug\Ud
 C:\Users\张琢之de\Desktop\pong pong game\UdpServer\UdpServer\obj\x86\Debug\UdpServer.pdb
 C:\Users\张琢之de\Desktop\Emgcontrol\pong\UdpServer\UdpServer\obj\x86\Debug\UdpServer.exe
 C:\Users\张琢之de\Desktop\Emgcontrol\pong\UdpServer\UdpServer\obj\x86\Debug\UdpServer.pdb
+E:\GitUpdate\Emgcontrol\pong\UdpServer\UdpServer\obj\x86\Debug\UdpServer.exe
+E:\GitUpdate\Emgcontrol\pong\UdpServer\UdpServer\obj\x86\Debug\UdpServer.pdb
+E:\GitUpdate\Emgcontrol\pong\UdpServer\UdpServer\obj\x86\Debug\UdpServer.csprojResolveAssemblyReference.cache
+E:\GitUpdate\Emgcontrol\pong\UdpServer\UdpServer\bin\Debug\UdpServer.exe
+E:\GitUpdate\Emgcontrol\pong\UdpServer\UdpServer\bin\Debug\UdpServer.pdb
+E:\GitUpdate\Emgcontrol\pong\UdpServer\UdpServer\bin\Debug\MccDaq.dll
+E:\GitUpdate\Emgcontrol\pong\UdpServer\UdpServer\bin\Debug\MccDaq.xml

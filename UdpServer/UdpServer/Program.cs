@@ -16,6 +16,7 @@ using AnalogIO;
 using MccDaq;
 using ErrorDefs;
 
+
 namespace UDP
 {
     class Program
@@ -100,13 +101,14 @@ namespace UDP
                 recv = newsock.ReceiveFrom(data, ref Remote);
                 Console.WriteLine(Encoding.ASCII.GetString(data, 0, recv));
 
+              
                 ULStat = DaqBoard.AIn(Chan, Range, out DataValue);//读取输入通道，输出16位整数值
-                //  Convert raw data to Volts by calling ToEngUnits
-                //  (member function of MccBoard class)
+                                                                  //  Convert raw data to Volts by calling ToEngUnits
+                                                                  //  (member function of MccBoard class)
                 ULStat = DaqBoard.ToEngUnits(Range, DataValue, out EngUnits);//将原始数据转换成电压
 
                 int barHeight = (int)Math.Ceiling(EngUnits * 1000 + 150);
-
+         
                 newsock.SendTo(Encoding.ASCII.GetBytes(barHeight.ToString()), Remote);
 
 
